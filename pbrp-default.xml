@@ -19,7 +19,7 @@
     <remove-project name="platform/bootable/recovery"/>
 
     <remove-project name="platform/build" />
-    <!-- <remove-project name="platform/build/soong" /> -->
+    <remove-project name="platform/build/soong" />
 
     <!-- We need the LOS forks of these repos -->
     <remove-project name="platform/hardware/interfaces"/>
@@ -36,6 +36,10 @@
         <linkfile src="envsetup.sh" dest="build/envsetup.sh"/>
         <linkfile src="target" dest="build/target"/>
         <linkfile src="tools" dest="build/tools"/>
+    </project>
+    <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="PitchBlackRecoveryProject" revision="android-14.0">
+      <linkfile src="root.bp" dest="Android.bp" />
+      <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
     <project path="external/python3" name="android_external_python3" remote="TeamWin" revision="android-12.1"/>
 
