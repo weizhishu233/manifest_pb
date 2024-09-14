@@ -328,6 +328,7 @@
     <remove-project name="platform/external/replicaisland"/>
     <remove-project name="platform/external/rmi4utils"/>
     <remove-project name="platform/external/rnnoise"  />
+    <remove-project name="platform/external/robolectric" />
     <remove-project name="platform/external/robolectric-shadows"  />
     <remove-project name="platform/external/rootdev"/>
     <remove-project name="platform/external/rust/crates/arbitrary"  />
