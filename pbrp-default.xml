@@ -70,7 +70,7 @@
     <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="LineageOS" revision="lineage-18.1"/>
 
     <!-- Include for legacy wrappedkey support -->
-    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="LineageOS" revision="lineage-21.0" />
+    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="LineageOS" revision="fe73af6086a9775e6d9b2820e0c01003e81f3b1b" />
 
     <!-- Include lineage-tools for lzma support -->
     <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" remote="LineageOS" revision="lineage-21.0"/>
