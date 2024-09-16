@@ -335,7 +335,6 @@
     <remove-project name="platform/external/rust/crates/async-stream"  />
     <remove-project name="platform/external/rust/crates/async-stream-impl"  />
     <remove-project name="platform/external/rust/crates/async-task"  />
-    <remove-project name="platform/external/rust/crates/async-trait"  />
     <remove-project name="platform/external/rust/crates/atty"  />
     <remove-project name="platform/external/rust/crates/bencher"  />
     <remove-project name="platform/external/rust/crates/bstr"  />
