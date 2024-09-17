@@ -2,7 +2,7 @@
 <manifest>
     <remote name="PitchBlackRecoveryProject"
             fetch="https://github.com/PitchBlackRecoveryProject"
-            revision="android-12.1"/>
+            revision="android-14.0"/>
 
     <remote name="TeamWin"
             fetch="https://github.com/TeamWin"
@@ -17,18 +17,11 @@
 
     <!-- We need the PitchBlackRecoveryProject forks of these repos -->
     <remove-project name="platform/bootable/recovery"/>
-
-    <remove-project name="platform/build" />
-    <remove-project name="platform/build/soong" />
-
-    <!-- We need the LOS forks of these repos -->
-    <remove-project name="platform/hardware/interfaces"/>
-
-    <!-- PBRP lives in PitchBlackRecoveryProject repo -->
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="PitchBlackRecoveryProject" revision="android-14.0"/>
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="PitchBlackRecoveryProject"/>
 
     <!-- Use PitchBlackRecoveryProject repos for full recovery compatibility -->
-    <project path="build/make" name="android_build" remote="PitchBlackRecoveryProject" revision="android-14.0" groups="pdk">
+    <remove-project name="platform/build" />
+    <project path="build/make" name="android_build" remote="PitchBlackRecoveryProject" groups="pdk">
         <copyfile src="core/root.mk" dest="Makefile"/>
         <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk"/>
         <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default"/>
@@ -37,7 +30,9 @@
         <linkfile src="target" dest="build/target"/>
         <linkfile src="tools" dest="build/tools"/>
     </project>
-    <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="PitchBlackRecoveryProject" revision="android-14.0">
+
+    <remove-project name="platform/build/soong" />
+    <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="PitchBlackRecoveryProject">
       <linkfile src="root.bp" dest="Android.bp" />
       <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
     </project>
@@ -60,8 +55,14 @@
     <!-- Include external/bash for bash support -->
     <project path="external/bash" name="android_external_bash" remote="LineageOS" revision="lineage-21.0"/>
 
+    <remove-project name="platform/external/icu" />
+    <project path="external/icu" name="android_external_icu" remote="PitchBlackRecoveryProject" />
+
     <!-- Include external/libncurses for bash and nano support -->
     <project path="external/libncurses" name="android_external_libncurses" remote="LineageOS" revision="lineage-21.0"/>
+
+    <remove-project name="platform/external/libxml2" />
+    <project path="external/libxml2" name="android_external_libxml2" remote="PitchBlackRecoveryProject" />
 
     <!-- Include external/nano for nano support -->
     <project path="external/nano" name="android_external_nano" remote="LineageOS" revision="lineage-21.0"/>
@@ -69,11 +70,24 @@
     <!-- Include ntfs_3g for NTFS support -->
     <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="LineageOS" revision="lineage-18.1"/>
 
+    <remove-project name="platform/external/sqlite" />
+    <project path="external/sqlite" name="android_external_sqlite" remote="PitchBlackRecoveryProject" />
+
     <!-- Include for legacy wrappedkey support -->
+    <remove-project name="platform/hardware/interfaces"/>
     <project path="hardware/interfaces" name="android_hardware_interfaces" remote="LineageOS" revision="fe73af6086a9775e6d9b2820e0c01003e81f3b1b" />
 
     <!-- Include lineage-tools for lzma support -->
     <project path="prebuilts/tools-lineage" name="android_prebuilts_tools-lineage" remote="LineageOS" revision="lineage-21.0"/>
+
+    <remove-project name="platform/system/core" />
+    <project path="system/core" name="android_system_core" remote="PitchBlackRecoveryProject"/>
+
+    <remove-project name="platform/system/security" />
+    <project path="system/security" name="android_system_security" remote="PitchBlackRecoveryProject"/>
+
+    <remove-project name="platform/system/vold" />
+    <project path="system/vold" name="android_system_vold" remote="PitchBlackRecoveryProject"/>
 
     <!-- Common qcom repos -->
     <project name="android_device_qcom_common" path="device/qcom/common" remote="TeamWin" revision="android-12.1" />
