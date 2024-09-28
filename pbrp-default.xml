@@ -83,6 +83,9 @@
     <remove-project name="platform/system/core" />
     <project path="system/core" name="android_system_core" remote="PitchBlackRecoveryProject"/>
 
+    <remove-project name="platform/system/update_engine" />
+    <project path="system/update_engine" name="android_system_update_engine" remote="TeamWin" revision="refs/changes/80/7780/1"/>
+
     <remove-project name="platform/system/security" />
     <project path="system/security" name="android_system_security" remote="PitchBlackRecoveryProject"/>
 
@@ -91,7 +94,7 @@
 
     <!-- Common qcom repos -->
     <project name="android_device_qcom_common" path="device/qcom/common" remote="TeamWin" revision="android-12.1" />
-    <project name="android_device_qcom_twrp-common" path="device/qcom/twrp-common" remote="TeamWin" revision="android-12.1" />
+    <project name="android_device_qcom_twrp-common" path="device/qcom/twrp-common" remote="TeamWin" revision="refs/changes/67/7767/2" />
     <project name="android_hardware_qcom_bootctrl" path="hardware/qcom-caf/bootctrl" remote="LineageOS" revision="lineage-21.0-caf" />
     <project name="android_vendor_qcom_opensource_display-commonsys-intf" path="vendor/qcom/opensource/commonsys-intf/display" remote="LineageOS" revision="lineage-21.0" />
     <project name="android_vendor_qcom_opensource_interfaces" path="vendor/qcom/opensource/interfaces" remote="LineageOS" revision="lineage-21.0" />
