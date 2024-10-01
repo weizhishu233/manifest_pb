@@ -85,8 +85,6 @@
 
     <remove-project name="platform/compatibility/cdd" />
 
-    <remove-project name="platform/cts" />
-
     <remove-project name="platform/developers/build" />
     <remove-project name="platform/developers/demos" />
     <remove-project name="platform/developers/samples/android" />
@@ -811,7 +809,6 @@
     <remove-project name="platform/test/vti/dashboard"/>
     <remove-project name="platform/test/vti/fuzz_test_serving"/>
     <remove-project name="platform/test/vti/test_serving"/>
-    <remove-project name="platform/test/vts-testcase/fuzz"/>
     <remove-project name="platform/test/vts-testcase/hal-trace"/>
     <remove-project name="platform/test/vts-testcase/kernel"/>
     <remove-project name="platform/test/vts-testcase/nbu"/>
